@@ -1,0 +1,6 @@
+FROM openjdk:8-jdk-alpine
+ARG JAR_FILE=target/ms-ibar-1.0.jar
+WORKDIR /opt/app
+COPY ${JAR_FILE} ms-ibar.jar
+ENTRYPOINT ["java","-jar","ms-ibar.jar"]
+
